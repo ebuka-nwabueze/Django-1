@@ -31,4 +31,7 @@ pipenv install
 
 > DEBUG = ***
 
-* To generate secret keys you could use this in a terminal window "openssl rand -base64 64"
+* To generate secret keys you could use this in a terminal window 
+```
+openssl rand -base64 64
+```
