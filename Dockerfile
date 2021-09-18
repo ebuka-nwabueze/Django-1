@@ -7,7 +7,7 @@ RUN pip install -r requirements.txt
 
 RUN mkdir /app
 WORKDIR /app
-COPY ./myblog ./app
+COPY . ./app
 
 # EXPOSE 8000
 

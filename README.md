@@ -2,7 +2,7 @@
 This is a Django Blog application. Users can create accounts, login and make posts.
 
 # Run Project
-### Local
+## Local
 * Install a local virtual environment(venv) 
 ```
 python3 -m venv env
@@ -19,7 +19,16 @@ pip install pipenv
 ```
 pipenv install
 ```
-## Re-create environment variables
+## Using Docker
+
+* Simply run 
+
+```
+Docker compose build
+Docker compose up
+```
+
+# Re-create environment variables
 * This should be in the .env file in the root directory
 > SECRET_KEY = ****
 
