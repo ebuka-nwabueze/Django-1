@@ -24,8 +24,7 @@ pipenv install
 * Simply run 
 
 ```
-Docker compose build
-Docker compose up
+docker compose up --build
 ```
 
 # Re-create environment variables
