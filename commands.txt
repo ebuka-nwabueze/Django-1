@@ -1,0 +1,4 @@
+#run the commands inside your terminal to build image and run
+
+docker build --tag django-blog .
+docker run --publish 8000:8000 django-blog
