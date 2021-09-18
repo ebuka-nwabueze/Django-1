@@ -29,3 +29,9 @@ pipenv install
 ```
 openssl rand -base64 64
 ```
+
+> NOTE: After adding new dependencies. (Install new depdencies using **pipenv**) run the code below to update **requirements.txt**
+
+```
+pipenv lock --requirements
+```
