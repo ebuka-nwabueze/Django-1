@@ -41,5 +41,5 @@ Docker compose up
 > NOTE: After adding new dependencies. (Install new depdencies using **pipenv**) run the code below to update **requirements.txt**
 
 ```
-pipenv lock --requirements
+pipenv lock -r > requirements.txt
 ```
