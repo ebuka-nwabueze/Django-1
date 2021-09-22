@@ -2,13 +2,28 @@ version: "3.8"
 
 services: 
   app:
+    container_name: apps
     build: 
       context: .
     ports: 
       - "8000:8000"
     volumes: 
       - ./myblog:/app
+      - static:/static
     env_file: 
       - .env
-    command: >
-      sh -c "python manage.py runserver 0.0.0.0:8000"
+    # command: >
+    #   sh -c "python manage.py runserver 0.0.0.0:8000" 
+  nginx:
+    build: ./nginx
+    volumes: 
+      - static:/static
+    ports: 
+      - "80:80"
+    # environment: 
+    #   APP_SERVER: 172.26.0.2:8000
+    depends_on: 
+      - app
+
+volumes: 
+  static:
