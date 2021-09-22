@@ -36,7 +36,7 @@ pipenv install
 Docker compose build
 Docker compose up
 ```
-
+Access using 0.0.0.0
 
 > NOTE: After adding new dependencies. (Install new depdencies using **pipenv**) run the code below to update **requirements.txt**
 
