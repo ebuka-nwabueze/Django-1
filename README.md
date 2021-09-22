@@ -1,6 +1,15 @@
 # Django-1
 This is a Django Blog application. Users can create accounts, login and make posts.
+# Re-create environment variables
+* This should be in the .env file in the root directory
+> SECRET_KEY = ****
 
+> DEBUG = ***
+
+* To generate secret keys you could use this in a terminal window 
+```
+openssl rand -base64 64
+```
 # Run Project
 ## Local
 * Install a local virtual environment(venv) 
@@ -28,19 +37,9 @@ Docker compose build
 Docker compose up
 ```
 
-# Re-create environment variables
-* This should be in the .env file in the root directory
-> SECRET_KEY = ****
-
-> DEBUG = ***
-
-* To generate secret keys you could use this in a terminal window 
-```
-openssl rand -base64 64
-```
 
 > NOTE: After adding new dependencies. (Install new depdencies using **pipenv**) run the code below to update **requirements.txt**
 
 ```
-pipenv lock --requirements
+pipenv lock -r > requirements.txt
 ```

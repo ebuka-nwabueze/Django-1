@@ -7,8 +7,13 @@ RUN pip install -r requirements.txt
 
 RUN mkdir /app
 WORKDIR /app
-COPY . ./app
+COPY ./myblog ./app
+
+COPY ./entrypoint.sh /
+ENTRYPOINT [ "sh", "/entrypoint.sh" ]
 
 # EXPOSE 8000
+
+# CMD [ "gunicorn", "myblog.wsgi:application", "--bind 0.0.0.0:8000" ]
 
 # CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
